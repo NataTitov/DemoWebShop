@@ -7,5 +7,6 @@ public class HomePageTest extends TestBase {
     @Test
     public void isHomeComponentPresentTest(){
         Assert.assertTrue(isHomeComponentPresent());
+
     }
 }

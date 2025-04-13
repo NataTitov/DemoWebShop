@@ -41,6 +41,5 @@ public class CreateAccountTests extends TestBase {
 
         //verify SingOut Link is displayed
         Assert.assertTrue(isElementLocator(By.xpath("//a[@href='/logout']")));
-
     }
 }
