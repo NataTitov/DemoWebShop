@@ -70,6 +70,7 @@ public class AddItemToCartTests extends TestBase {
         click(By.xpath("//input[contains(@onclick,'catalog/31/1/1')]"));
         pause(1000);
         click(By.cssSelector("span[title='Close']"));
+        click(By.cssSelector("a[href='/']"));
         click(By.xpath("//input[contains(@onclick,'catalog/72/1/1')]"));
         pause(1000);
         click(By.cssSelector("#add-to-cart-button-72"));
