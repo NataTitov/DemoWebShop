@@ -6,9 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class AddItemToCartTests extends TestBase {
     @BeforeMethod
@@ -25,8 +24,7 @@ public class AddItemToCartTests extends TestBase {
         pause(1000);
         click(By.cssSelector("span[title='Close']"));
         click(By.cssSelector("li[id='topcartlink'] a[class='ico-cart']"));
-        Assert.assertTrue(isProductInCar(laptop));
-
+        Assert.assertTrue(isProductInCart(laptop));
     }
 
     public Product getLaptop() {
@@ -44,7 +42,7 @@ public class AddItemToCartTests extends TestBase {
         pause(1000);
         click(By.cssSelector("span[title='Close']"));
         click(By.cssSelector("li[id='topcartlink'] a[class='ico-cart']"));
-        Assert.assertTrue(isProductInCar(computer));
+        Assert.assertTrue(isProductInCart(computer));
     }
 
     public Product getComputer() {
@@ -53,16 +51,47 @@ public class AddItemToCartTests extends TestBase {
         return computer;
     }
 
-    public boolean isProductInCar(Product product) {
+    public boolean isProductInCart(Product product) {
         List<WebElement> cartItems = driver.findElements(By.xpath("//a[@class='product-name']"));
         for (WebElement cartItem : cartItems) {
             System.out.println(cartItem.getText());
-            if (cartItem.getText().equals(product.getTitel())) {
+            if (cartItem.getText().equals(product.getTitle())) {
                 return true;
             }
         }
         return false;
     }
+
+    @Test
+    public void addTwoItemsToCartPositiveTest1() {
+        Product laptop = getLaptop();
+        Product computer = getComputer();
+        List<Product> products = new ArrayList<>(Arrays.asList(laptop, computer));
+        click(By.xpath("//input[contains(@onclick,'catalog/31/1/1')]"));
+        pause(1000);
+        click(By.cssSelector("span[title='Close']"));
+        click(By.xpath("//input[contains(@onclick,'catalog/72/1/1')]"));
+        pause(1000);
+        click(By.cssSelector("#add-to-cart-button-72"));
+        pause(1000);
+        click(By.cssSelector("span[title='Close']"));
+        click(By.cssSelector("li[id='topcartlink'] a[class='ico-cart']"));
+        Assert.assertTrue(isProductsInCart(products));
+    }
+
+    private boolean isProductsInCart(List<Product> products) {
+        List<WebElement> cartItems = driver.findElements(By.xpath("//a[@class='product-name']"));
+        Set<String> cartItemTitles = cartItems.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toSet());
+
+        Set<String> productTitles = products.stream()
+                .map(Product::getTitle)
+                .collect(Collectors.toSet());
+
+        return cartItemTitles.containsAll(productTitles);
+    }
+
 
     public void pause(int millis) {
         try {

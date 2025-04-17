@@ -1,18 +1,18 @@
 package com.webshop.tests;
 
 public class Product {
-    private String titel;
+    private String title;
 
-    public String getTitel() {
-        return titel;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitel(String titel) {
-        this.titel = titel;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public Product(String titel) {
-        this.titel = titel;
+    public Product(String title) {
+        this.title = title;
     }
 }
 
