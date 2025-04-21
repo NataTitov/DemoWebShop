@@ -19,12 +19,21 @@ public class AddItemToCartTests extends TestBase {
 
     @Test
     public void addFirstProductToCartPositiveTest() {
+        clearCart();
         Product laptop = getLaptop();
+        addLaptopToCart();
+        openCart();
+        Assert.assertTrue(isProductInCart(laptop));
+    }
+
+    public void addLaptopToCart() {
         click(By.xpath("//input[contains(@onclick,'catalog/31/1/1')]"));
         pause(1000);
         click(By.cssSelector("span[title='Close']"));
+    }
+
+    public void openCart() {
         click(By.cssSelector("li[id='topcartlink'] a[class='ico-cart']"));
-        Assert.assertTrue(isProductInCart(laptop));
     }
 
     public Product getLaptop() {
@@ -35,14 +44,29 @@ public class AddItemToCartTests extends TestBase {
 
     @Test
     public void addNextItemToCartPositiveTest() {
+        clearCart();
         Product computer = getComputer();
+        addComputerToCart();
+        openCart();
+        Assert.assertTrue(isProductInCart(computer));
+    }
+
+    public void addComputerToCart() {
         click(By.xpath("//input[contains(@onclick,'catalog/72/1/1')]"));
         pause(1000);
         click(By.cssSelector("#add-to-cart-button-72"));
         pause(1000);
         click(By.cssSelector("span[title='Close']"));
-        click(By.cssSelector("li[id='topcartlink'] a[class='ico-cart']"));
-        Assert.assertTrue(isProductInCart(computer));
+    }
+
+    public void clearCart() {
+        openCart();
+        List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@name='removefromcart']"));
+        for(WebElement checkbox : checkboxes) {
+            checkbox.click();
+        }
+        click(By.xpath("//input[@name='updatecart']"));
+        toHomePage();
     }
 
     public Product getComputer() {
@@ -64,23 +88,18 @@ public class AddItemToCartTests extends TestBase {
 
     @Test
     public void addTwoItemsToCartPositiveTest1() {
+        clearCart();
         Product laptop = getLaptop();
         Product computer = getComputer();
-        List<Product> products = new ArrayList<>(Arrays.asList(laptop, computer));
-        click(By.xpath("//input[contains(@onclick,'catalog/31/1/1')]"));
-        pause(1000);
-        click(By.cssSelector("span[title='Close']"));
-        click(By.cssSelector("a[href='/']"));
-        click(By.xpath("//input[contains(@onclick,'catalog/72/1/1')]"));
-        pause(1000);
-        click(By.cssSelector("#add-to-cart-button-72"));
-        pause(1000);
-        click(By.cssSelector("span[title='Close']"));
-        click(By.cssSelector("li[id='topcartlink'] a[class='ico-cart']"));
+        List<Product> products = List.of(laptop, computer);
+        addLaptopToCart();
+        toHomePage();
+        addComputerToCart();
+        openCart();
         Assert.assertTrue(isProductsInCart(products));
     }
 
-    private boolean isProductsInCart(List<Product> products) {
+    public boolean isProductsInCart(List<Product> products) {
         List<WebElement> cartItems = driver.findElements(By.xpath("//a[@class='product-name']"));
         Set<String> cartItemTitles = cartItems.stream()
                 .map(WebElement::getText)
@@ -100,6 +119,9 @@ public class AddItemToCartTests extends TestBase {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+    public void toHomePage() {
+        click(By.cssSelector("a[href='/']"));
     }
 
 }
