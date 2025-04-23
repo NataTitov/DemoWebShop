@@ -1,17 +1,23 @@
 package com.webshop.tests;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginTests extends TestBase {
+    @BeforeMethod
+    public void precondition() {
+        if(!app.getUser().isLoginLinkPresent()){
+            app.getUser().clickOnLogOutLink();
+        }
+    }
 
     @Test
     public void loginPositiveTest() {
-        clickOnLoginLink();
-        fillRegisterLoginForm(userLogin);
-        clickOnLoginButton();
-        Assert.assertTrue(isElementLocator(By.cssSelector(".ico-logout")));
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillRegisterLoginForm(app.getUser().userLogin);
+        app.getUser().clickOnLoginButton();
+        Assert.assertTrue(app.getUser().isLogOutLinkPresent());
     }
 
 }

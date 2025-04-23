@@ -1,33 +1,44 @@
 package com.webshop.tests;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class CreateAccountTests extends TestBase {
 
+    @BeforeMethod
+    public void precondition() {
+        if(!app.getUser().isLoginLinkPresent()){
+            app.getUser().clickOnLogOutLink();
+        }
+    }
+    SoftAssert softAssert = new SoftAssert();
+
     @Test
     public void newUserRegistrationPositiveTest() {
-        clickOnRegisterLink();
-        clickOnGender();
-        fillNameLastName(userPositivTest);
-        fillRegisterLoginForm(userPositivTest);
-        repeatPassword(userPositivTest);
-        clickOnRegisterButton();
-        Assert.assertTrue(isElementLocator(By.xpath("//a[@href='/logout']")));
+        app.getUser().clickOnRegisterLink();
+        app.getUser().clickOnGender();
+        app.getUser().fillNameLastName(app.getUser().userPositivTest);
+        app.getUser().fillRegisterLoginForm(app.getUser().userPositivTest);
+        app.getUser().repeatPassword(app.getUser().userPositivTest);
+        app.getUser().clickOnRegisterButton();
+        Assert.assertTrue(app.getUser().isLogOutLinkPresent());
     }
 
     @Test
     public void existedUserRegistrationNegativeTest() {
-        clickOnRegisterLink();
-        clickOnGender();
-        fillNameLastName(userNegativeTest);
-        fillRegisterLoginForm(userNegativeTest);
-        repeatPassword(userNegativeTest);
-        clickOnRegisterButton();
+        app.getUser().clickOnRegisterLink();
+        app.getUser().clickOnGender();
+        app.getUser().fillNameLastName(app.getUser().userNegativeTest);
+        app.getUser().fillRegisterLoginForm(app.getUser().userNegativeTest);
+        app.getUser().repeatPassword(app.getUser().userNegativeTest);
+        app.getUser().clickOnRegisterButton();
 
-        Assert.assertTrue(isElementLocator(By.cssSelector(".validation-summary-errors")));
-        Assert.assertFalse(isElementPresent(By.cssSelector(".ico-logout")));
+        softAssert.assertTrue(app.getUser().isErrorMessagePresent());
+        softAssert.assertFalse(app.getUser().isLogOutLinkPresent());
+        softAssert.assertAll();
     }
+
 
 }
