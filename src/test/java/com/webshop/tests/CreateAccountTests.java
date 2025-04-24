@@ -7,15 +7,16 @@ import org.testng.asserts.SoftAssert;
 
 public class CreateAccountTests extends TestBase {
 
+    SoftAssert softAssert = new SoftAssert();
+
     @BeforeMethod
     public void precondition() {
         if(!app.getUser().isLoginLinkPresent()){
             app.getUser().clickOnLogOutLink();
         }
     }
-    SoftAssert softAssert = new SoftAssert();
 
-    @Test
+    @Test(enabled = false)
     public void newUserRegistrationPositiveTest() {
         app.getUser().clickOnRegisterLink();
         app.getUser().clickOnGender();

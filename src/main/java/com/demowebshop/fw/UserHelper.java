@@ -1,24 +1,25 @@
 package com.demowebshop.fw;
 
+import com.demowebshop.data.UserData;
 import com.demowebshop.models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class UserHelper extends BaseHelper{
-    int i = (int) ((System.currentTimeMillis() / 1000) % 3600);
+
     public User userPositivTest = new User()
-            .setName("John")
-            .setLastName("Snow")
-            .setEmail("test" + i + "@test.com")
-            .setPassword("ASqw123456!");
+            .setName(UserData.NAME_REG)
+            .setLastName(UserData.LASTNAME_REG)
+            .setEmail(UserData.EMAIL_REG)
+            .setPassword(UserData.PASSWORD_REG_LOGIN);
     public User userNegativeTest = new User()//repeat EMAIL
-            .setName("Natalia")
-            .setLastName("Titov")
-            .setEmail("test101@test.com")
-            .setPassword("ASqw123456!");
+            .setName(UserData.NAME_REG_NEGATIVE)
+            .setLastName(UserData.LASTNAME_REG_NEGATIVE)
+            .setEmail(UserData.EMAIL_REG_NEGATIVE)
+            .setPassword(UserData.PASSWORD_REG_LOGIN);
     public User userLogin = new User()
-            .setEmail("pataha@gmx.com")
-            .setPassword("vgBH123456!");
+            .setEmail(UserData.EMAIL_LOGIN)
+            .setPassword(UserData.PASSWORD_REG_LOGIN);
 
     public UserHelper(WebDriver driver) {
         super(driver);
