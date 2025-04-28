@@ -2,17 +2,24 @@ package com.demowebshop.fw;
 
 import com.demowebshop.data.UserData;
 import com.demowebshop.models.User;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class UserHelper extends BaseHelper{
 
     public User userPositivTest = new User()
+            .setGender(UserData.GENDER)
             .setName(UserData.NAME_REG)
             .setLastName(UserData.LASTNAME_REG)
             .setEmail(UserData.EMAIL_REG)
             .setPassword(UserData.PASSWORD_REG_LOGIN);
     public User userNegativeTest = new User()//repeat EMAIL
+            .setGender(UserData.GENDER)
             .setName(UserData.NAME_REG_NEGATIVE)
             .setLastName(UserData.LASTNAME_REG_NEGATIVE)
             .setEmail(UserData.EMAIL_REG_NEGATIVE)
@@ -20,6 +27,9 @@ public class UserHelper extends BaseHelper{
     public User userLogin = new User()
             .setEmail(UserData.EMAIL_LOGIN)
             .setPassword(UserData.PASSWORD_REG_LOGIN);
+
+
+
 
     public UserHelper(WebDriver driver) {
         super(driver);
@@ -42,8 +52,12 @@ public class UserHelper extends BaseHelper{
         click(By.name("register-button"));
     }
 
-    public void clickOnGender() {
-        click(By.xpath("//label[.='Female']"));
+    public void clickOnGender(User user) {
+        if(user.getGender().equalsIgnoreCase("Female")){
+            click(By.xpath("//label[.='Female']"));
+        }else{
+            click(By.xpath("//label[.='Male']"));
+        }
     }
 
     public void clickOnRegisterLink() {

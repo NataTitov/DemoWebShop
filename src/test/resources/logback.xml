@@ -9,7 +9,7 @@
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %msg%n</pattern>
         </encoder>
-        <maxHistory>30</maxHistory>
+        <maxHistory>10</maxHistory>
         <totalSizeCap>3GB</totalSizeCap>
     </appender>
 

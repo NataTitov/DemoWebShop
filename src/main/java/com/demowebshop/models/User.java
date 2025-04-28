@@ -1,10 +1,20 @@
 package com.demowebshop.models;
 
 public class User {
+    private String gender;
     private String email;
     private String password;
     private String name;
     private String lastName;
+
+    public String getGender() {
+        return gender;
+    }
+
+    public User setGender(String gender) {
+        this.gender = gender;
+        return this;
+    }
 
     public String getEmail() {
         return email;
@@ -40,5 +50,13 @@ public class User {
     public User setLastName(String lastName) {
         this.lastName = lastName;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Registration" verbose="1">
+    <test name="Registration">
+        <classes>
+            <class name="com.webshop.tests.CreateAccountTests">
+                <methods>
+                    <exclude name=".*Negative.*"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
