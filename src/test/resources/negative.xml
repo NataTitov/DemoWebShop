@@ -8,6 +8,11 @@
                     <include name=".*Negative.*"/>
                 </methods>
             </class>
+            <class name="com.webshop.tests.AddItemToCartTests">
+                <methods>
+                    <include name=".*Negative.*"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

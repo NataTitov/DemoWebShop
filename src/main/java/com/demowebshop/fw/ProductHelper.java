@@ -38,6 +38,17 @@ public class ProductHelper extends BaseHelper {
         waitForElementVisible(By.cssSelector("span[title='Close']"), 10);
         click(By.cssSelector("span[title='Close']"));
     }
+    public void addQuantityProductToCart(String quantity) {
+        click(By.xpath("//input[contains(@onclick,'catalog/72/1/1')]"));
+        waitForElementVisible(By.cssSelector("#add-to-cart-button-72"), 10);
+        WebElement quantityInputComputer = driver.findElement(By.id("addtocart_72_EnteredQuantity"));
+        quantityInputComputer.clear();
+        quantityInputComputer.sendKeys(quantity);
+        click(By.cssSelector("#add-to-cart-button-72"));
+        waitForElementVisible(By.cssSelector("span[title='Close']"), 10);
+        click(By.cssSelector("span[title='Close']"));
+
+    }
 
     public void clearCart() {
         openCart();
@@ -84,5 +95,13 @@ public class ProductHelper extends BaseHelper {
 
     public void toHomePage() {
         click(By.cssSelector("a[href='/']"));
+    }
+
+    public boolean isWarningMessagePresent() {
+        return isElementLocator(By.xpath("//p[.='Quantity should be positive']"));
+    }
+
+    public boolean isCartEmptyMessagePresent() {
+        return isElementPresent(By.xpath("//div[contains(text(),'Your Shopping Cart is empty!')]"));
     }
 }

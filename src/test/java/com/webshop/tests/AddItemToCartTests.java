@@ -4,10 +4,14 @@ import com.demowebshop.models.Product;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.util.*;
 
 public class AddItemToCartTests extends TestBase {
+
+    SoftAssert softAssert = new SoftAssert();
+
     @BeforeMethod
     public void precondition() {
         if(!app.getUser().isLoginLinkPresent()){
@@ -47,6 +51,36 @@ public class AddItemToCartTests extends TestBase {
         app.getProduct().addComputerToCart();
         app.getProduct().openCart();
         Assert.assertTrue(app.getProduct().isProductsInCart(products));
+    }
+
+    @Test
+    public void addZeroQuantityProductToCartNegativeTest() {
+        app.getProduct().clearCart();
+        app.getProduct().addQuantityProductToCart("0");
+        softAssert.assertTrue(app.getProduct().isWarningMessagePresent());
+        app.getProduct().openCart();
+        softAssert.assertTrue(app.getProduct().isCartEmptyMessagePresent());
+        softAssert.assertAll();
+
+    }
+
+    @Test
+    public void addNegativeQuantityProductToCartNegativeTest() {
+        app.getProduct().clearCart();
+        app.getProduct().addQuantityProductToCart("-2");
+        softAssert.assertTrue(app.getProduct().isWarningMessagePresent());
+        app.getProduct().openCart();
+        softAssert.assertTrue(app.getProduct().isCartEmptyMessagePresent());
+        softAssert.assertAll();
+    }
+    @Test
+    public void addEmptyQuantityProductToCartNegativeTest() {
+        app.getProduct().clearCart();
+        app.getProduct().addQuantityProductToCart("");
+        softAssert.assertTrue(app.getProduct().isWarningMessagePresent());
+        app.getProduct().openCart();
+        softAssert.assertTrue(app.getProduct().isCartEmptyMessagePresent());
+        softAssert.assertAll();
     }
 
 }
