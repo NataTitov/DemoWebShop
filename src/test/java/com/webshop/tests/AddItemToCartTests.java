@@ -49,5 +49,4 @@ public class AddItemToCartTests extends TestBase {
         Assert.assertTrue(app.getProduct().isProductsInCart(products));
     }
 
-
 }
