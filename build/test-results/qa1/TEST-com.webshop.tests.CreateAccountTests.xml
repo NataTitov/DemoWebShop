@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.webshop.tests.CreateAccountTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-04-28T18:48:21" hostname="DESKTOP-OLNSQL4" time="43.88">
+  <properties/>
+  <testcase name="newUserRegistrationPositiveFromDataProviderWithCsvFileTest[0](User{email='ak4@gm.de', password='Df1234567!!'})" classname="com.webshop.tests.CreateAccountTests" time="3.265"/>
+  <testcase name="newUserRegistrationPositiveFromDataProviderWithCsvFileTest[1](User{email='kw4@gm.de', password='Qw!%234567'})" classname="com.webshop.tests.CreateAccountTests" time="2.853"/>
+  <testcase name="newUserRegistrationPositiveFromDataProviderWithCsvFileTest[2](User{email='ml4@gm.de', password='LKjr90504!'})" classname="com.webshop.tests.CreateAccountTests" time="2.848"/>
+  <testcase name="newUserRegistrationPositiveFromDataProviderWithCsvFileTest[3](User{email='eb4@gm.de', password='Bv6702893!'})" classname="com.webshop.tests.CreateAccountTests" time="2.762"/>
+  <system-out><![CDATA[20:48:20.969 [Test worker] INFO  com.webshop.tests.TestBase -- Start test: newUserRegistrationPositiveFromDataProviderWithCsvFileTest[User{email='ak4@gm.de', password='Df1234567!!'}]
+20:48:20.977 [Test worker] INFO  com.demowebshop.utils.MyListener -- Before find elements -> By.cssSelector: .ico-login
+20:48:20.978 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:21.098 [Test worker] INFO  com.demowebshop.utils.MyListener -- List size -> 1
+20:48:21.099 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:21.102 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.cssSelector: [href='/register']
+20:48:21.103 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:21.119 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.cssSelector: [href='/register']
+20:48:21.121 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:21.694 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.xpath: //label[.='Female']
+20:48:21.695 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:21.704 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.xpath: //label[.='Female']
+20:48:21.705 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:21.925 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: FirstName
+20:48:21.925 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:21.930 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: FirstName
+20:48:21.931 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.201 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: FirstName
+20:48:22.202 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.207 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: FirstName
+20:48:22.207 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.212 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: FirstName
+20:48:22.212 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.217 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: FirstName
+20:48:22.217 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.236 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: LastName
+20:48:22.236 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.243 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: LastName
+20:48:22.243 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.479 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: LastName
+20:48:22.480 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.489 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: LastName
+20:48:22.489 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.496 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: LastName
+20:48:22.496 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.501 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: LastName
+20:48:22.501 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.513 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Email
+20:48:22.513 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.516 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Email
+20:48:22.517 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.729 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Email
+20:48:22.729 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.734 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Email
+20:48:22.734 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.740 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Email
+20:48:22.740 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.745 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Email
+20:48:22.745 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.760 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Password
+20:48:22.760 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.764 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Password
+20:48:22.764 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:22.995 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Password
+20:48:22.996 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:23.000 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Password
+20:48:23.001 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:23.007 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Password
+20:48:23.007 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:23.011 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Password
+20:48:23.011 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:23.025 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: ConfirmPassword
+20:48:23.026 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:23.031 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: ConfirmPassword
+20:48:23.031 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:23.254 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: ConfirmPassword
+20:48:23.255 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:23.260 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: ConfirmPassword
+20:48:23.261 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:23.265 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: ConfirmPassword
+20:48:23.266 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:23.270 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: ConfirmPassword
+20:48:23.270 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:23.282 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.name: register-button
+20:48:23.282 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:23.286 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.name: register-button
+20:48:23.286 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:24.352 [Test worker] INFO  com.demowebshop.utils.MyListener -- Before find elements -> By.cssSelector: .ico-logout
+20:48:24.352 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:24.359 [Test worker] INFO  com.demowebshop.utils.MyListener -- List size -> 1
+20:48:24.359 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:24.368 [Test worker] INFO  com.webshop.tests.TestBase -- PASSED: newUserRegistrationPositiveFromDataProviderWithCsvFileTest
+20:48:24.368 [Test worker] INFO  com.webshop.tests.TestBase -- Stop test
+20:48:24.368 [Test worker] INFO  com.webshop.tests.TestBase -- =================================
+20:48:24.370 [Test worker] INFO  com.webshop.tests.TestBase -- Start test: newUserRegistrationPositiveFromDataProviderWithCsvFileTest[User{email='kw4@gm.de', password='Qw!%234567'}]
+20:48:24.372 [Test worker] INFO  com.demowebshop.utils.MyListener -- Before find elements -> By.cssSelector: .ico-login
+20:48:24.372 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:34.385 [Test worker] INFO  com.demowebshop.utils.MyListener -- List size -> 0
+20:48:34.385 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:34.385 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.cssSelector: .ico-logout
+20:48:34.385 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:34.395 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.cssSelector: .ico-logout
+20:48:34.395 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:35.080 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.cssSelector: [href='/register']
+20:48:35.080 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:35.091 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.cssSelector: [href='/register']
+20:48:35.091 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:35.485 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.xpath: //label[.='Female']
+20:48:35.485 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:35.485 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.xpath: //label[.='Female']
+20:48:35.485 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:35.707 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: FirstName
+20:48:35.707 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:35.713 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: FirstName
+20:48:35.713 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:35.932 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: FirstName
+20:48:35.932 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:35.938 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: FirstName
+20:48:35.938 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:35.944 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: FirstName
+20:48:35.944 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:35.950 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: FirstName
+20:48:35.950 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:35.962 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: LastName
+20:48:35.962 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:35.968 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: LastName
+20:48:35.968 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.190 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: LastName
+20:48:36.190 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.202 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: LastName
+20:48:36.202 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.209 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: LastName
+20:48:36.209 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.223 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: LastName
+20:48:36.223 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.233 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Email
+20:48:36.233 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.239 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Email
+20:48:36.239 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.459 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Email
+20:48:36.459 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.465 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Email
+20:48:36.465 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.471 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Email
+20:48:36.471 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.478 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Email
+20:48:36.478 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.496 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Password
+20:48:36.496 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.496 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Password
+20:48:36.496 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.715 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Password
+20:48:36.721 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.727 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Password
+20:48:36.727 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.733 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Password
+20:48:36.733 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.733 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Password
+20:48:36.733 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.745 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: ConfirmPassword
+20:48:36.745 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.751 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: ConfirmPassword
+20:48:36.751 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.969 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: ConfirmPassword
+20:48:36.969 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.975 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: ConfirmPassword
+20:48:36.975 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.975 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: ConfirmPassword
+20:48:36.975 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.980 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: ConfirmPassword
+20:48:36.980 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.993 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.name: register-button
+20:48:36.993 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:36.993 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.name: register-button
+20:48:36.993 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:37.927 [Test worker] INFO  com.demowebshop.utils.MyListener -- Before find elements -> By.cssSelector: .ico-logout
+20:48:37.927 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:37.933 [Test worker] INFO  com.demowebshop.utils.MyListener -- List size -> 1
+20:48:37.933 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:37.933 [Test worker] INFO  com.webshop.tests.TestBase -- PASSED: newUserRegistrationPositiveFromDataProviderWithCsvFileTest
+20:48:37.933 [Test worker] INFO  com.webshop.tests.TestBase -- Stop test
+20:48:37.933 [Test worker] INFO  com.webshop.tests.TestBase -- =================================
+20:48:37.939 [Test worker] INFO  com.webshop.tests.TestBase -- Start test: newUserRegistrationPositiveFromDataProviderWithCsvFileTest[User{email='ml4@gm.de', password='LKjr90504!'}]
+20:48:37.939 [Test worker] INFO  com.demowebshop.utils.MyListener -- Before find elements -> By.cssSelector: .ico-login
+20:48:37.939 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:47.949 [Test worker] INFO  com.demowebshop.utils.MyListener -- List size -> 0
+20:48:47.949 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:47.949 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.cssSelector: .ico-logout
+20:48:47.949 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:47.955 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.cssSelector: .ico-logout
+20:48:47.955 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:48.765 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.cssSelector: [href='/register']
+20:48:48.778 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:48.778 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.cssSelector: [href='/register']
+20:48:48.778 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.193 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.xpath: //label[.='Male']
+20:48:49.193 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.206 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.xpath: //label[.='Male']
+20:48:49.206 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.419 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: FirstName
+20:48:49.419 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.419 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: FirstName
+20:48:49.419 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.650 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: FirstName
+20:48:49.650 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.650 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: FirstName
+20:48:49.650 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.659 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: FirstName
+20:48:49.659 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.659 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: FirstName
+20:48:49.659 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.672 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: LastName
+20:48:49.672 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.672 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: LastName
+20:48:49.672 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.902 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: LastName
+20:48:49.902 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.902 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: LastName
+20:48:49.902 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.915 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: LastName
+20:48:49.915 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.920 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: LastName
+20:48:49.920 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.920 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Email
+20:48:49.920 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:49.934 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Email
+20:48:49.934 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.151 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Email
+20:48:50.151 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.164 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Email
+20:48:50.164 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.164 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Email
+20:48:50.164 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.177 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Email
+20:48:50.177 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.190 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Password
+20:48:50.190 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.190 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Password
+20:48:50.190 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.417 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Password
+20:48:50.417 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.417 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Password
+20:48:50.417 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.417 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Password
+20:48:50.417 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.417 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Password
+20:48:50.417 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.438 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: ConfirmPassword
+20:48:50.438 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.438 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: ConfirmPassword
+20:48:50.438 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.662 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: ConfirmPassword
+20:48:50.662 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.662 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: ConfirmPassword
+20:48:50.662 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.662 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: ConfirmPassword
+20:48:50.662 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.675 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: ConfirmPassword
+20:48:50.675 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.675 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.name: register-button
+20:48:50.675 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:50.688 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.name: register-button
+20:48:50.688 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:51.600 [Test worker] INFO  com.demowebshop.utils.MyListener -- Before find elements -> By.cssSelector: .ico-logout
+20:48:51.600 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:51.600 [Test worker] INFO  com.demowebshop.utils.MyListener -- List size -> 1
+20:48:51.600 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:48:51.613 [Test worker] INFO  com.webshop.tests.TestBase -- PASSED: newUserRegistrationPositiveFromDataProviderWithCsvFileTest
+20:48:51.613 [Test worker] INFO  com.webshop.tests.TestBase -- Stop test
+20:48:51.613 [Test worker] INFO  com.webshop.tests.TestBase -- =================================
+20:48:51.613 [Test worker] INFO  com.webshop.tests.TestBase -- Start test: newUserRegistrationPositiveFromDataProviderWithCsvFileTest[User{email='eb4@gm.de', password='Bv6702893!'}]
+20:48:51.613 [Test worker] INFO  com.demowebshop.utils.MyListener -- Before find elements -> By.cssSelector: .ico-login
+20:48:51.613 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:01.630 [Test worker] INFO  com.demowebshop.utils.MyListener -- List size -> 0
+20:49:01.630 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:01.630 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.cssSelector: .ico-logout
+20:49:01.630 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:01.630 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.cssSelector: .ico-logout
+20:49:01.630 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:02.218 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.cssSelector: [href='/register']
+20:49:02.218 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:02.231 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.cssSelector: [href='/register']
+20:49:02.231 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:02.630 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.xpath: //label[.='Male']
+20:49:02.630 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:02.630 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.xpath: //label[.='Male']
+20:49:02.630 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:02.847 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: FirstName
+20:49:02.847 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:02.847 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: FirstName
+20:49:02.847 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.071 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: FirstName
+20:49:03.071 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.075 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: FirstName
+20:49:03.075 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.075 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: FirstName
+20:49:03.075 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.087 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: FirstName
+20:49:03.087 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.087 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: LastName
+20:49:03.087 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.099 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: LastName
+20:49:03.099 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.320 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: LastName
+20:49:03.320 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.320 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: LastName
+20:49:03.320 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.332 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: LastName
+20:49:03.332 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.332 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: LastName
+20:49:03.332 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.344 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Email
+20:49:03.344 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.344 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Email
+20:49:03.344 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.565 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Email
+20:49:03.565 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.577 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Email
+20:49:03.577 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.585 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Email
+20:49:03.585 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.597 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Email
+20:49:03.597 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.609 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Password
+20:49:03.609 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.609 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Password
+20:49:03.609 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.822 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Password
+20:49:03.822 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.834 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Password
+20:49:03.834 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.834 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: Password
+20:49:03.834 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.834 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: Password
+20:49:03.834 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.846 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: ConfirmPassword
+20:49:03.846 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:03.858 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: ConfirmPassword
+20:49:03.858 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:04.076 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: ConfirmPassword
+20:49:04.076 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:04.076 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: ConfirmPassword
+20:49:04.076 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:04.087 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.id: ConfirmPassword
+20:49:04.087 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:04.087 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.id: ConfirmPassword
+20:49:04.087 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:04.099 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator will find -> By.name: register-button
+20:49:04.099 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:04.099 [Test worker] INFO  com.demowebshop.utils.MyListener -- The locator is -> By.name: register-button
+20:49:04.099 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:04.980 [Test worker] INFO  com.demowebshop.utils.MyListener -- Before find elements -> By.cssSelector: .ico-logout
+20:49:04.980 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:04.980 [Test worker] INFO  com.demowebshop.utils.MyListener -- List size -> 1
+20:49:04.980 [Test worker] INFO  com.demowebshop.utils.MyListener -- ==========================================
+20:49:04.992 [Test worker] INFO  com.webshop.tests.TestBase -- PASSED: newUserRegistrationPositiveFromDataProviderWithCsvFileTest
+20:49:04.992 [Test worker] INFO  com.webshop.tests.TestBase -- Stop test
+20:49:04.992 [Test worker] INFO  com.webshop.tests.TestBase -- =================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

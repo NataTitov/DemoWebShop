@@ -1,6 +1,7 @@
 package com.demowebshop.fw;
 
 import com.demowebshop.models.Product;
+import com.demowebshop.models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,6 +30,28 @@ public class ProductHelper extends BaseHelper {
         String firstProduct = driver.findElement(By.xpath("//h2[@class='product-title']/a[contains(.,'14.1-inch Laptop')]")).getText();
         Product laptop = new Product(firstProduct);
         return laptop;
+    }
+
+    public Product giftCard() {
+        String firstProductGiftCard = driver.findElement(By.xpath("//h2[@class='product-title']/a[contains(.,'$25 Virtual Gift Card')]")).getText();
+        Product giftCard = new Product(firstProductGiftCard);
+        return giftCard;
+    }
+    public void fillRecipientsNameEmail(User user) {
+        type(By.id("giftcard_2_RecipientName"), user.getName());
+        type(By.id("giftcard_2_RecipientEmail"), user.getEmail());
+        //TODO
+    }
+    public void openGiftCardPage() {
+        click(By.xpath("//input[contains(@onclick,'catalog/2/1/1')]"));
+        waitForElementVisible(By.cssSelector("#add-to-cart-button-2"), 10);
+        //TODO
+
+    }
+    public void addGiftCardToCart() {
+        click(By.id("add-to-cart-button-2"));
+        waitForElementVisible(By.cssSelector("span[title='Close']"), 10);
+        click(By.cssSelector("span[title='Close']"));
     }
 
     public void addComputerToCart() {
@@ -97,8 +120,20 @@ public class ProductHelper extends BaseHelper {
         click(By.cssSelector("a[href='/']"));
     }
 
-    public boolean isWarningMessagePresent() {
+    public boolean isWarningQuantityMessagePresent() {
         return isElementLocator(By.xpath("//p[.='Quantity should be positive']"));
+    }
+    public boolean isWarningGifCardRecipientNameMessagePresent() {
+        return isElementLocator(By.xpath("//p[.='Enter valid recipient name']"));
+    }
+    public boolean isWarningGifCardRecipientEmailMessagePresent() {
+        return isElementLocator(By.xpath("//p[.='Enter valid recipient email']"));
+
+    }public boolean isWarningGifCardRecipientFieldsEmptyMessagePresent() {
+        if(isElementLocator(By.xpath("//p[.='Enter valid recipient name']"))&&isElementLocator(By.xpath("//p[.='Enter valid recipient email']"))){
+            return true;
+        }
+        return false;
     }
 
     public boolean isCartEmptyMessagePresent() {

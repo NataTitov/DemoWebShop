@@ -13,6 +13,11 @@
                     <include name=".*Negative.*"/>
                 </methods>
             </class>
+            <class name="com.webshop.tests.AddGiftCardToCartTest">
+                <methods>
+                    <include name=".*Negative.*"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

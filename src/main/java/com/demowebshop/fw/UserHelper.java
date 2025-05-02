@@ -73,6 +73,7 @@ public class UserHelper extends BaseHelper{
         type(By.id("LastName"), user.getLastName());
     }
 
+
     public void clickOnLogOutLink() {
         click(By.cssSelector(".ico-logout"));
     }

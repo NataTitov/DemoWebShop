@@ -1,6 +1,7 @@
 package com.webshop.tests;
 
 import com.demowebshop.models.Product;
+import com.demowebshop.utils.DataProviders;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -53,34 +54,16 @@ public class AddItemToCartTests extends TestBase {
         Assert.assertTrue(app.getProduct().isProductsInCart(products));
     }
 
-    @Test
-    public void addZeroQuantityProductToCartNegativeTest() {
+    @Test(dataProvider = "addQuantityProductToCartNegativeTest", dataProviderClass = DataProviders.class)//svyasali dva klassa
+    public void addQuantityProductToCartNegativeTestFromDataProviderTest(String quantity) {
         app.getProduct().clearCart();
-        app.getProduct().addQuantityProductToCart("0");
-        softAssert.assertTrue(app.getProduct().isWarningMessagePresent());
+        app.getProduct().addQuantityProductToCart(quantity);
+        softAssert.assertTrue(app.getProduct().isWarningQuantityMessagePresent());
         app.getProduct().openCart();
         softAssert.assertTrue(app.getProduct().isCartEmptyMessagePresent());
         softAssert.assertAll();
 
     }
 
-    @Test
-    public void addNegativeQuantityProductToCartNegativeTest() {
-        app.getProduct().clearCart();
-        app.getProduct().addQuantityProductToCart("-2");
-        softAssert.assertTrue(app.getProduct().isWarningMessagePresent());
-        app.getProduct().openCart();
-        softAssert.assertTrue(app.getProduct().isCartEmptyMessagePresent());
-        softAssert.assertAll();
-    }
-    @Test
-    public void addEmptyQuantityProductToCartNegativeTest() {
-        app.getProduct().clearCart();
-        app.getProduct().addQuantityProductToCart("");
-        softAssert.assertTrue(app.getProduct().isWarningMessagePresent());
-        app.getProduct().openCart();
-        softAssert.assertTrue(app.getProduct().isCartEmptyMessagePresent());
-        softAssert.assertAll();
-    }
 
 }

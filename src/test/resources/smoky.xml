@@ -5,7 +5,16 @@
         <classes>
             <class name="com.webshop.tests.HomePageTest"/>
             <class name="com.webshop.tests.LoginTests"/>
-            <class name="com.webshop.tests.AddItemToCartTests"/>
+            <class name="com.webshop.tests.AddItemToCartTests">
+                <methods>
+                    <exclude name=".*Negative.*"/>
+                </methods>
+            </class>
+            <class name="com.webshop.tests.AddGiftCardToCartTest">
+                <methods>
+                    <exclude name=".*Negative.*"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
