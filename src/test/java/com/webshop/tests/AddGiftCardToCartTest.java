@@ -1,5 +1,7 @@
 package com.webshop.tests;
 
+import com.demowebshop.data.UserData;
+import com.demowebshop.fw.ProductHelper;
 import com.demowebshop.models.Product;
 import com.demowebshop.models.User;
 import com.demowebshop.utils.DataProviders;
@@ -21,23 +23,31 @@ public class AddGiftCardToCartTest extends TestBase {
         app.getUser().fillRegisterLoginForm(app.getUser().userLogin);
         app.getUser().clickOnLoginButton();
     }
+    @Test
+    public void isFieldsGiftCardWithLoginUserDataTest() {
+        app.getProduct().clearCart();
+        app.getProduct().openGiftCardPage();
+        Assert.assertTrue(app.getProduct().isFieldsWithLoginUserData());
+
+    }
+
 
     @Test(dataProvider = "addGiftCardToCartPositiveTest", dataProviderClass = DataProviders.class)
-    public void addGiftCardToCartPositiveTest(String name, String mail) {
+    public void addGiftCardToCartPositiveTest(String name, String mail, String message) {
         app.getProduct().clearCart();
         Product giftCard = app.getProduct().giftCard();
         app.getProduct().openGiftCardPage();
-        app.getProduct().fillRecipientsNameEmail(new User().setName(name).setEmail(mail));
+        app.getProduct().fillRecipientsNameEmailMessage(new User().setName(name).setEmail(mail).setMessage(message));
         app.getProduct().addGiftCardToCart();
         app.getProduct().openCart();
         Assert.assertTrue(app.getProduct().isProductInCart(giftCard));
     }
 
     @Test(dataProvider = "addGiftCardToCartNegativeTest", dataProviderClass = DataProviders.class)
-    public void addGiftCardToCartNegativeTest(String name, String mail) {
+    public void addGiftCardToCartNegativeTest(String name, String mail, String message) {
         app.getProduct().clearCart();
         app.getProduct().openGiftCardPage();
-        app.getProduct().fillRecipientsNameEmail(new User().setName(name).setEmail(mail));
+        app.getProduct().fillRecipientsNameEmailMessage(new User().setName(name).setEmail(mail).setMessage(message));
         app.getProduct().addGiftCardToCart();
         if (name.trim().isEmpty() && mail.trim().isEmpty()){
             softAssert.assertTrue(app.getProduct().isWarningGifCardRecipientFieldsEmptyMessagePresent());

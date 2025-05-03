@@ -47,16 +47,17 @@ public class DataProviders {
     @DataProvider
     public Iterator<Object[]> addGiftCardToCartPositiveTest() {
         List<Object[]> list = new ArrayList<>();
-        list.add(new Object[]{"Thomas", "t@mail.com"});
-        list.add(new Object[]{"John", "j@mail.com"});
+        list.add(new Object[]{"Thomas", "t@mail.com", "test"});
+        list.add(new Object[]{"John", "j@mail.com", "test"});
         return list.iterator();
     }
+
     @DataProvider
     public Iterator<Object[]> addGiftCardToCartNegativeTest() {
         List<Object[]> list = new ArrayList<>();
-        list.add(new Object[]{"", "t@mail.com"});
-        list.add(new Object[]{"John", ""});
-        list.add(new Object[]{"", " "});
+        list.add(new Object[]{"", "t@mail.com", "test"});
+        list.add(new Object[]{"John", "", "test"});
+        list.add(new Object[]{"", " ", "test"});
         return list.iterator();
     }
 }

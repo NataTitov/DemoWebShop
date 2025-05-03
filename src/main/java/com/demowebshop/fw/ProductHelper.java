@@ -1,5 +1,6 @@
 package com.demowebshop.fw;
 
+import com.demowebshop.data.UserData;
 import com.demowebshop.models.Product;
 import com.demowebshop.models.User;
 import org.openqa.selenium.By;
@@ -37,17 +38,21 @@ public class ProductHelper extends BaseHelper {
         Product giftCard = new Product(firstProductGiftCard);
         return giftCard;
     }
-    public void fillRecipientsNameEmail(User user) {
+
+    public void fillRecipientsNameEmailMessage(User user) {
         type(By.id("giftcard_2_RecipientName"), user.getName());
         type(By.id("giftcard_2_RecipientEmail"), user.getEmail());
-        //TODO
+        type(By.id("giftcard_2_Message"), user.getMessage());
+
     }
+
     public void openGiftCardPage() {
         click(By.xpath("//input[contains(@onclick,'catalog/2/1/1')]"));
         waitForElementVisible(By.cssSelector("#add-to-cart-button-2"), 10);
-        //TODO
+
 
     }
+
     public void addGiftCardToCart() {
         click(By.id("add-to-cart-button-2"));
         waitForElementVisible(By.cssSelector("span[title='Close']"), 10);
@@ -61,6 +66,7 @@ public class ProductHelper extends BaseHelper {
         waitForElementVisible(By.cssSelector("span[title='Close']"), 10);
         click(By.cssSelector("span[title='Close']"));
     }
+
     public void addQuantityProductToCart(String quantity) {
         click(By.xpath("//input[contains(@onclick,'catalog/72/1/1')]"));
         waitForElementVisible(By.cssSelector("#add-to-cart-button-72"), 10);
@@ -75,7 +81,7 @@ public class ProductHelper extends BaseHelper {
 
     public void clearCart() {
         openCart();
-        if(!isElementPresent(By.xpath("//div[contains(text(),'Your Shopping Cart is empty!')]"))) {
+        if (!isElementPresent(By.xpath("//div[contains(text(),'Your Shopping Cart is empty!')]"))) {
             List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@name='removefromcart']"));
             for (WebElement checkbox : checkboxes) {
                 checkbox.click();
@@ -123,14 +129,18 @@ public class ProductHelper extends BaseHelper {
     public boolean isWarningQuantityMessagePresent() {
         return isElementLocator(By.xpath("//p[.='Quantity should be positive']"));
     }
+
     public boolean isWarningGifCardRecipientNameMessagePresent() {
         return isElementLocator(By.xpath("//p[.='Enter valid recipient name']"));
     }
+
     public boolean isWarningGifCardRecipientEmailMessagePresent() {
         return isElementLocator(By.xpath("//p[.='Enter valid recipient email']"));
 
-    }public boolean isWarningGifCardRecipientFieldsEmptyMessagePresent() {
-        if(isElementLocator(By.xpath("//p[.='Enter valid recipient name']"))&&isElementLocator(By.xpath("//p[.='Enter valid recipient email']"))){
+    }
+
+    public boolean isWarningGifCardRecipientFieldsEmptyMessagePresent() {
+        if (isElementLocator(By.xpath("//p[.='Enter valid recipient name']")) && isElementLocator(By.xpath("//p[.='Enter valid recipient email']"))) {
             return true;
         }
         return false;
@@ -138,5 +148,12 @@ public class ProductHelper extends BaseHelper {
 
     public boolean isCartEmptyMessagePresent() {
         return isElementPresent(By.xpath("//div[contains(text(),'Your Shopping Cart is empty!')]"));
+    }
+
+    public boolean isFieldsWithLoginUserData() {
+        String nameLoginGiftCard = driver.findElement(By.id("giftcard_2_SenderName")).getAttribute("value");
+        String emailLoginGiftCard = driver.findElement(By.id("giftcard_2_SenderEmail")).getAttribute("value");
+        String fieldYourNameInGiftCard = UserData.NAME_LOGIN + " " + UserData.LAST_NAME_LOGIN;
+        return fieldYourNameInGiftCard.equals(nameLoginGiftCard) && UserData.EMAIL_LOGIN.equals(emailLoginGiftCard);
     }
 }

@@ -6,6 +6,17 @@ public class User {
     private String password;
     private String name;
     private String lastName;
+    private String message;
+
+    public String getMessage() {
+
+        return message;
+    }
+
+    public User setMessage(String message) {
+        this.message = message;
+        return this;
+    }
 
     public String getGender() {
         return gender;

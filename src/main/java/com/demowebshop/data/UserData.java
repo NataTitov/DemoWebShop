@@ -12,7 +12,8 @@ public class UserData {
     public static final String LASTNAME_REG = "Snow";
     public static final String NAME_REG_NEGATIVE = "John";
     public static final String LASTNAME_REG_NEGATIVE = "Snow";
-
+    public static final String NAME_LOGIN = "Natalia";
+    public static final String LAST_NAME_LOGIN = "Titov";
 
 
 }
